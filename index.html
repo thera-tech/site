@@ -203,6 +203,31 @@
             right: 16%;
         }
 
+        /* Labels externos do triângulo */
+        .triangle-label {
+            position: absolute;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 0.3px;
+        }
+
+        .triangle-label-top {
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .triangle-label-left {
+            bottom: -30px;
+            left: 0;
+        }
+
+        .triangle-label-right {
+            bottom: -30px;
+            right: 0;
+        }
+
         .footer {
             background: rgba(15, 20, 25, 0.6);
             backdrop-filter: blur(10px);
@@ -319,6 +344,19 @@
                 font-size: 7px;
             }
 
+            .triangle-label {
+                font-size: 12px;
+            }
+
+            .triangle-label-top {
+                top: -25px;
+            }
+
+            .triangle-label-left,
+            .triangle-label-right {
+                bottom: -25px;
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
@@ -378,7 +416,14 @@
             </div>
 
             <div class="triangle-container">
+                <!-- Texto no topo -->
+                <div class="triangle-label triangle-label-top">Consultoria e Gestão</div>
+                
                 <img src="triangulo_transparente.png" alt="Ecossistema CSV" class="triangle-image" loading="lazy">
+                
+                <!-- Textos nos cantos inferiores -->
+                <div class="triangle-label triangle-label-left">Conteúdo e Ensino</div>
+                <div class="triangle-label triangle-label-right">Tecnologia</div>
             </div>
         </div>
     </div>
