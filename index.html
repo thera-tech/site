@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thera – Inteligência aplicada à saúde</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Thera. Tecnologia, produtos digitais e inteligência aplicada ao cuidado em saúde. Parte do ecossistema CSV.">
+    <meta name="keywords" content="Thera, saúde, tecnologia, VBHC, cuidado baseado em valor, CSV, inteligência em saúde">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Thera – Inteligência aplicada à saúde">
+    <meta property="og:description" content="Tecnologia, produtos digitais e inteligência aplicada ao cuidado em saúde.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thera.tech">
+    <meta property="og:site_name" content="Thera">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --thera-purple: #5B4A9E;
+            --thera-teal: #7DD3C0;
+            --csv-blue: #1B5E8F;
+            --text-primary: #2d3748;
+            --text-secondary: #718096;
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(125, 211, 192, 0.3),
+                            0 0 40px rgba(91, 74, 158, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(125, 211, 192, 0.5),
+                            0 0 60px rgba(91, 74, 158, 0.3);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(-45deg, #0f1419, #1a2332, #2d1b3d, #1e3a4a);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Partículas de fundo */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(125, 211, 192, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(91, 74, 158, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(27, 94, 143, 0.05) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-container {
+            margin-bottom: 50px;
+            animation: fade-in-up 1s ease-out;
+        }
+
+        .logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(125, 211, 192, 0.3));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .main-content {
+            animation: fade-in-up 1.2s ease-out 0.3s backwards;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--thera-teal) 0%, var(--thera-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 22px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 12px 28px;
+            background: rgba(125, 211, 192, 0.15);
+            border: 2px solid var(--thera-teal);
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--thera-teal);
+            margin-bottom: 50px;
+            animation: pulse-glow 3s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        .csv-badge {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fade-in-up 1.4s ease-out 0.6s backwards;
+        }
+
+        .csv-logo {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            filter: brightness(0) invert(1);
+        }
+
+        .csv-logo:hover {
+            opacity: 1;
+        }
+
+        .csv-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 16px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .logo {
+                max-width: 280px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .tagline {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+
+            .status-badge {
+                font-size: 14px;
+                padding: 10px 24px;
+            }
+
+            .csv-badge {
+                margin-top: 50px;
+                padding-top: 30px;
+            }
+
+            .csv-logo {
+                max-width: 160px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+
+            .logo {
+                max-width: 240px;
+            }
+        }
+
+        /* Acessibilidade */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="Logotipo Horizontal Negativo.png" alt="Thera" class="logo">
+        </div>
+
+        <div class="main-content">
+            <h1>Inteligência aplicada à saúde</h1>
+            
+            <p class="tagline">
+                Tecnologia, produtos digitais e inteligência para orquestrar ecossistemas de cuidado baseado em valor.
+            </p>
+
+            <div class="status-badge">
+                Em breve
+            </div>
+        </div>
+
+        <div class="csv-badge">
+            <img src="marca_csv_neg.png" alt="Grupo CSV" class="csv-logo">
+            <p class="csv-text">Parte do ecossistema CSV – Cuidados em Saúde com Valor</p>
+        </div>
+    </div>
+</body>
+</html>
